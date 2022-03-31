@@ -1,25 +1,18 @@
-/* Resetar Navegador */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+function setup(){
+    // create a canvas black with a text white on the center
+    createCanvas(windowWidth, windowHeight);
+    background(0);
+    fill(255);
+    textSize(32);
+    textAlign(CENTER);
+    text("Click to draw", width/2, height/2);
 }
 
-/* Variáveis */
-:root{
-    --purple: #3204ff
-}
+function draw(){
+    // draw a circle when mouse is pressed and random color
+    if(mouseIsPressed){
+        fill(random(255), random(255), random(255));
+        circle(mouseX, mouseY, random(100), random(100));
+    }
 
-header{
-    background-color: var(--purple);
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-h1{
-    font-size: 2em;
-    font-weight: bold;
-    color: #fff;
 }
