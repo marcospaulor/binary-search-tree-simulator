@@ -34,7 +34,7 @@ function insertNode() {
 function deleteNode() {
   let value = buttonValue.value;
   console.log(value);
-  binaryTree.delete(value);
+  binaryTree.delete(parseInt(value));
   binaryTree.drawTree();
 }
 
@@ -42,7 +42,7 @@ function deleteNode() {
 function searchNode() {
   let value = buttonValue.value;
   console.log(value);
-  binaryTree.search(value);
+  binaryTree.search(parseInt(value));
 }
 
 // Delete all nodes from the tree
