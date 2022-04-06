@@ -1,27 +1,58 @@
 let binaryTree = new BinaryTree();
+let buttonValue = document.getElementById('value');
+
+// Setup the canvas
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(202, 240, 248);
-  // for (let i = 0; i < 10; i++) {
-  //   binaryTree.insert(floor(random(0, 100)));
-  // }
-  binaryTree.insert(10);
-  binaryTree.insert(50);
-  binaryTree.insert(20);
-  binaryTree.insert(100);
-  binaryTree.insert(30);
-  binaryTree.insert(40);
-  binaryTree.insert(90);
-  binaryTree.insert(80);
-
-  binaryTree.drawTree();
-  
 }
 
+// Draw the tree in the canvas
 function draw() {
   // Draw the tree
+  windowResized();
+  background(202, 240, 248);
+  if (binaryTree.root !== null) {
+    binaryTree.drawTree();
+  }
 }
 
-function windowResized(){
-  return setup();
+// resize canvas when window is resized without clearing the canvas
+function windowResized() {
+  return resizeCanvas(windowWidth, windowHeight);
+}
+
+// Add a node to the tree calling the insert method
+function insertNode() {
+  let value = buttonValue.value;
+  console.log(value);
+  binaryTree.insert(parseInt(value));
+  binaryTree.drawTree();
+}
+
+// Delete a node from the tree calling the delete method
+function deleteNode() {
+  let value = buttonValue.value;
+  console.log(value);
+  binaryTree.delete(value);
+  binaryTree.drawTree();
+}
+
+// Search a node in the tree calling the search method
+function searchNode() {
+  let value = buttonValue.value;
+  console.log(value);
+  binaryTree.search(value);
+}
+
+// Delete all nodes from the tree
+function clearTree() {
+  binaryTree = new BinaryTree();
+  background(202, 240, 248);
+}
+
+// Evente prevent default to avoid the default behaviour of the form
+function preventReload(event) {
+  event.preventDefault();
+  return false;
 }

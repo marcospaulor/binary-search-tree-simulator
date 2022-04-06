@@ -1,27 +1,37 @@
+// calcula o espaço de acordo com o nível do nó
+function calculateSpacing(level, spacing) {
+  for (let i = 0; i < level; i++) {
+    spacing /= 2;
+  }
+  return spacing;
+}
+
 class Node {
-  constructor(value, x, y) {
+  constructor(value, x, y, level) {
     this.value = value;
     this.left = null;
     this.right = null;
     this.x = x;
     this.y = y;
+    this.level = level;
   }
 
   addNode(node) {
+    node.level = this.level + 1;
     if (node.value < this.value) {
       if (this.left === null) {
+        console.log(node.level);
         this.left = node;
-        // posição na árvore
-        this.left.x = this.x - 20;
+        this.left.x = this.x - calculateSpacing(node.level, width / 2);
         this.left.y = this.y + 50;
       } else {
         this.left.addNode(node);
       }
     } else if (node.value > this.value) {
       if (this.right === null) {
+        console.log(node.level);
         this.right = node;
-        // posição na árvore
-        this.right.x = this.x + 20;
+        this.right.x = this.x + calculateSpacing(node.level, width / 2);
         this.right.y = this.y + 50;
       } else {
         this.right.addNode(node);
@@ -54,18 +64,20 @@ class Node {
     if (this.left !== null) {
       this.left.draw(this);
     }
-    // Nó
-    fill(0, 180, 216);
+    // ligação entre o pai e o filho
+    stroke(3, 4, 94);
+    line(parent.x , parent.y, this.x , this.y);
+    // nó
     noStroke();
+    fill(3, 4, 94);
+    circle(this.x, this.y, 20);
+    // texto do nó
+    noStroke();
+    fill(202, 240, 248);
+    textSize(12);
     textAlign(CENTER);
-    text(this.value, this.x, this.y);
+    text(this.value, this.x, this.y + 4);
 
-    stroke(0, 180, 216);
-    noFill();
-    ellipse(this.x, this.y, 30, 30);
-    // Ligação entre pai e filho
-    stroke(0, 180, 216);
-    line(parent.x, parent.y + 10, this.x, this.y + 10);
     if (this.right !== null) {
       this.right.draw(this);
     }

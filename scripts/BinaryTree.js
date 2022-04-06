@@ -4,7 +4,7 @@ class BinaryTree {
   }
 
   insert(value) {
-    let node = new Node(value, width / 2, 20);
+    let node = new Node(value, width / 2, 20, 0);
     if (this.root === null) {
       this.root = node;
     } else {
@@ -22,6 +22,5 @@ class BinaryTree {
 
   drawTree() {
     this.root.draw(this.root);
-    return true;
   }
 }
