@@ -67,19 +67,19 @@ class Node {
     if (this.left !== null) {
       this.left.draw(this);
     }
-    // ligação entre o pai e o filho
-    stroke(3, 4, 94);
-    line(parent.x , parent.y, this.x , this.y);
     // nó
     noStroke();
     fill(3, 4, 94);
-    circle(this.x, this.y, 20);
+    ellipse(this.x, this.y, 20);
+    // ligação entre o pai e o filho
+    stroke(3, 4, 94);
+    line(parent.x , parent.y, this.x , this.y);
     // texto do nó
     noStroke();
     fill(202, 240, 248);
-    textSize(12);
     textAlign(CENTER);
-    text(this.value, this.x, this.y + 4);
+    textSize(8);
+    text(this.value, this.x, this.y);
 
     if (this.right !== null) {
       this.right.draw(this);
@@ -131,7 +131,7 @@ function removeNode(root, value) {
     // nó sucessor
     let sucessor = minValue(current.right);
     let val = sucessor.value;
-    deleteNode(root, sucessor.value);
+    removeNode(root, sucessor.value);
     // nó atual recebe o valor do sucessor
     current.value = val;
     // caso 3: nó a ser deletado tem apenas um filho
