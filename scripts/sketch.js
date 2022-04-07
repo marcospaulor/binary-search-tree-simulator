@@ -35,7 +35,6 @@ function insertNode() {
 function deleteNode() {
   let value = buttonValue.value;
   binaryTree.delete(parseInt(value));
-  clearTree();
   binaryTree.drawTree();
 }
 
