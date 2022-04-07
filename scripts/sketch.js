@@ -35,6 +35,7 @@ function deleteNode() {
   let value = buttonValue.value;
   binaryTree.delete(parseInt(value));
   binaryTree.drawTree();
+  buttonValue.value = '';
 }
 
 // Search a node in the tree calling the search method
@@ -42,6 +43,7 @@ function searchNode() {
   let value = buttonValue.value;
   binaryTree.search(parseInt(value));
   binaryTree.drawTree();
+  buttonValue.value = '';
 }
 
 // Delete all nodes from the tree
