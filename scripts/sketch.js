@@ -4,14 +4,14 @@ let buttonValue = document.getElementById('value');
 // Setup the canvas
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(202, 240, 248);
+  background(255);
 }
 
 // Draw the tree in the canvas
 function draw() {
   // Draw the tree
   windowResized();
-  background(202, 240, 248);
+  background(255);
   if (binaryTree.root !== null) {
     binaryTree.drawTree();
   }
@@ -34,9 +34,8 @@ function insertNode() {
 // Delete a node from the tree calling the delete method
 function deleteNode() {
   let value = buttonValue.value;
-  // console.log(value);
   binaryTree.delete(parseInt(value));
-  clear();
+  clearTree();
   binaryTree.drawTree();
 }
 
@@ -51,7 +50,7 @@ function searchNode() {
 // Delete all nodes from the tree
 function clearTree() {
   binaryTree = new BinaryTree();
-  background(202, 240, 248);
+  background(255);
 }
 
 // Evente prevent default to avoid the default behaviour of the form

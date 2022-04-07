@@ -2,13 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     font-family: 'Poppins', Times, serif;
 }
 
 /* Variáveis */
 :root{
-    --purple: #3204ff;
     --white: #ffffff;
     --grey: #CAF0F8;
     --blueciano: #00B4D8;
@@ -44,6 +43,11 @@ header {
 
 }
 
+img{
+    height: 100%;
+    width: 100%;
+}
+
 h1{
     font-size: 1.9em;
     font-weight: bold;
@@ -72,7 +76,7 @@ input[type=number]{
     border: none;
     width: 9rem;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--white);
 }
 
 /* hover */

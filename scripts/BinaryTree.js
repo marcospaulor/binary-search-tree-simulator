@@ -13,7 +13,7 @@ class BinaryTree {
   }
 
   delete(value) {
-    deleteNode(this.root, value);
+    removeNode(this.root, value);
   }
 
   traverse() {
