@@ -18,7 +18,7 @@
             </div>
             <h1>Binary Search Tree Simulator</h1>
             <form name="form" onsubmit="return preventReload(event)">
-                <input id="value" value="0" type="number" name="node" placeholder="Insert a node">
+                <input id="value" value="0" min="0" step="1" type="number" name="node" placeholder="Insert a node">
                 <input type="button" onclick="insertNode()" name="insert" value="Insert">
                 <input type="button" onclick="deleteNode()" name="delete" value="Delete">
                 <input type="button" onclick="searchNode()" name="search" value="Search">
