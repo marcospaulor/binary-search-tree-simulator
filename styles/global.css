@@ -163,16 +163,29 @@ a:hover{
         height: auto;
     }
 
+    .logo{
+        width: 40%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
     h1{
         font-size: 1em;
     }
 
     form{
-        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-group{
+        width: 100%;
+        margin-top: 0.5rem;
+        display: flex;
     }
 
     input[type=number]{
-        width: 100%;
+        width: 90%;
     }
 
     input[type="button"]{
@@ -181,15 +194,19 @@ a:hover{
 
     footer{
         flex-direction: column;
-        height: 15rem;
+        height: auto;
     }
 
     .description{
+        width: auto;
+        margin-top: 1rem;
         margin-bottom: 1rem;
     }
 
     .contact{
+        width: auto;
         margin-left: 0;
+        margin-bottom: 1rem;
     }
 
 }
