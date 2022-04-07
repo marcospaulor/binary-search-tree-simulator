@@ -155,7 +155,7 @@ a:hover{
     color: var(--red);
 }
 
-@media (max-width: 1000px){
+@media (max-width: 768px){
     header{
         padding-top: 20px;
         flex-direction: column;
