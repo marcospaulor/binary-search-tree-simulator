@@ -25,7 +25,6 @@ function windowResized() {
 // Add a node to the tree calling the insert method
 function insertNode() {
   let value = buttonValue.value;
-  console.log(value);
   binaryTree.insert(parseInt(value));
   binaryTree.drawTree();
   buttonValue.value = '';
@@ -41,7 +40,6 @@ function deleteNode() {
 // Search a node in the tree calling the search method
 function searchNode() {
   let value = buttonValue.value;
-  console.log(value);
   binaryTree.search(parseInt(value));
   binaryTree.drawTree();
 }

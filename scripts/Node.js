@@ -20,7 +20,6 @@ class Node {
     node.level = this.level + 1;
     if (node.value < this.value) {
       if (this.left === null) {
-        console.log(node.level);
         this.left = node;
         this.left.x = this.x - calculateSpacing(node.level, width / 2);
         this.left.y = this.y + 50;
@@ -29,7 +28,6 @@ class Node {
       }
     } else if (node.value > this.value) {
       if (this.right === null) {
-        console.log(node.level);
         this.right = node;
         this.right.x = this.x + calculateSpacing(node.level, width / 2);
         this.right.y = this.y + 50;
@@ -51,7 +49,6 @@ class Node {
 
   search(value) {
     if (this.value === value) {
-      console.log(`Elemento encontrado: ${value}`);
       alert(`Elemento encontrado: ${value}`);
       return this;
     } else if (value < this.value && this.left !== null) {
@@ -59,7 +56,7 @@ class Node {
     } else if (value > this.value && this.right !== null) {
       return this.right.search(value);
     } else{
-      console.log(`Elemento não encontrado: ${value}`);
+      alert(`Elemento não encontrado: ${value}`);
     }
   }
 
