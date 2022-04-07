@@ -136,11 +136,16 @@ footer{
     margin-left: 2rem;
 }
 
+h3{
+    margin-bottom: 0.5rem;
+}
+
 a{
     text-decoration: none;
     color: var(--grey);
     font-weight: bold;
     font-size: 0.8rem;
+    margin-right: 1rem;
 }
 
 a:hover{

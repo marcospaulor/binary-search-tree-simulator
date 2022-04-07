@@ -12,6 +12,10 @@ class BinaryTree {
     }
   }
 
+  delete(value) {
+    deleteNode(this.root, value);
+  }
+
   traverse() {
     this.root.visit();
   }

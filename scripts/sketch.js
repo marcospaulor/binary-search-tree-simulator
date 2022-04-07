@@ -28,13 +28,15 @@ function insertNode() {
   console.log(value);
   binaryTree.insert(parseInt(value));
   binaryTree.drawTree();
+  buttonValue.value = '';
 }
 
 // Delete a node from the tree calling the delete method
 function deleteNode() {
   let value = buttonValue.value;
-  console.log(value);
+  // console.log(value);
   binaryTree.delete(parseInt(value));
+  clear();
   binaryTree.drawTree();
 }
 
@@ -43,6 +45,7 @@ function searchNode() {
   let value = buttonValue.value;
   console.log(value);
   binaryTree.search(parseInt(value));
+  binaryTree.drawTree();
 }
 
 // Delete all nodes from the tree
