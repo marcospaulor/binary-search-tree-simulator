@@ -51,9 +51,3 @@ function clearTree() {
   binaryTree = new BinaryTree();
   background(255);
 }
-
-// Evente prevent default to avoid the default behaviour of the form
-function preventReload(event) {
-  event.preventDefault();
-  return false;
-}

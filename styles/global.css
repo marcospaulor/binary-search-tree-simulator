@@ -24,7 +24,7 @@
 
 header {
     background-color: var(--bluegreen);
-    height: 100px;
+    height: 10%;
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -209,4 +209,10 @@ a:hover{
         margin-bottom: 1rem;
     }
 
+}
+
+@media(max-width: 1000px){
+    .button-group{
+        margin: 0;
+    }
 }

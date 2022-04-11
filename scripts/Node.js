@@ -67,7 +67,7 @@ class Node {
     // nó
     noStroke();
     fill(3, 4, 94);
-    ellipse(this.x, this.y, 20);
+    ellipse(this.x, this.y, 30);
     // ligação entre o pai e o filho
     stroke(3, 4, 94);
     line(parent.x , parent.y, this.x , this.y);
@@ -75,7 +75,7 @@ class Node {
     noStroke();
     fill(202, 240, 248);
     textAlign(CENTER);
-    textSize(8);
+    textSize(16);
     text(this.value, this.x, this.y);
 
     if (this.right !== null) {

@@ -17,7 +17,7 @@
                 <img src="./public/UFCAT_-_Identidade_Visual_Original.png" alt="Logo UFCAT">
             </div>
             <h1>Binary Search Tree Simulator</h1>
-            <form name="form" onsubmit="return preventReload(event)">
+            <form name="form" onsubmit="addEventListener('submit',(e)=> e.preventDefault())">
                 <input id="value" value="0" min="0" step="1" type="number" name="node" placeholder="Insert a node">
                 <div class="button-group">
                     <input type="button" onclick="insertNode()" name="insert" value="Insert">
